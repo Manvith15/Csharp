@@ -1,0 +1,25 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        try
+        {
+            Console.Write("Enter the first number:");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the second chance:");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            int result = num1 / num2;
+            Console.WriteLine("Result:" + result);
+        }
+        catch (DivideByZeroException)
+        {
+            Console.WriteLine("Error cannot divide by zero!");
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Error:please enter a valid nuymber only:");
+
+        }
+    }
+}
